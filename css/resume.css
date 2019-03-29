@@ -64,6 +64,13 @@ p.lead {
   padding-right: 5px;
 }
 
+.subsection {
+  font-family: 'Muli', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-size: 1rem;
+  font-weight: bold;
+  color: #00A752;
+}
+
 .social-icons a {
   display: inline-block;
   height: 3rem;
@@ -88,6 +95,10 @@ p.lead {
 .dev-icons {
   font-size: 3rem;
   color: #C7E700;
+}
+
+.dev-images {
+  height: 3rem;
 }
 
 /*.dev-icons .list-inline-item i:hover {
