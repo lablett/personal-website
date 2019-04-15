@@ -178,7 +178,11 @@ section.resume-section {
   min-height: 100vh
 }
 
-section.resume-section .resume-item .resume-date {
+/* section.resume-item {
+  padding-left: 20px;
+} */
+
+section.resume-section .resume-content .resume-item .resume-date {
   min-width: none;
 }
 
@@ -187,7 +191,7 @@ section.resume-section .resume-item .resume-date {
     min-height: 100vh;
   }
   section.resume-section .resume-item .resume-date {
-    min-width: 15rem;
+    min-width: 12rem;
   }
 }
 
@@ -208,6 +212,8 @@ section.resume-section .resume-item .resume-date {
 
 .text-secondary {
   color: #868e96;
+  font-family: 'Saira Semi Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  padding: 0.2em;
 }
 
 .text-highlight {
@@ -219,7 +225,7 @@ section.resume-section .resume-item .resume-date {
   font-weight: bold;
   text-transform: capitalize;
   font-family: 'Saira Semi Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-
+  padding: 1em;
 }
 
 .container-sm {
@@ -236,21 +242,22 @@ section.resume-section .resume-item .resume-date {
 }
 
 .images {
-  max-width: 50%;
-  padding: 20px;
+  max-width: 95%;
+  max-height: 95%;
+  padding: 2px;
   align-items: center;
+  margin: auto;
 }
-
+/*
 .images:hover {
   transform: scale(1.1);
   transition: .5s ease-in-out;
-}
+} */
 
 .center {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
 }
 
 .overlay {
@@ -285,7 +292,7 @@ section.resume-section .resume-item .resume-date {
 
 .container {
   flex-wrap: wrap;
-  justify-content: space-between;;
+  justify-content: space-between;
   flex-grow: 1;
 }
 
@@ -321,12 +328,14 @@ a:hover, a:focus, a:active {
 
 
 .content {
+  display: block;
   position: relative;
   width: 90%;
-  max-width: 400px;
+  height: 90%;
   margin: auto;
-  overflow: hidden;
-  text-align: center;
+  overflow: auto;
+  align-items: center;
+  object-fit: cover;
 }
 
 .content-overlay {
@@ -350,6 +359,9 @@ a:hover, a:focus, a:active {
 
 .content-image{
   width: 100%;
+  display: block;
+  overflow: auto;
+
 }
 
 .content-details {
