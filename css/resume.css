@@ -433,3 +433,20 @@ a:hover, a:focus, a:active {
 .fadeIn-top{
   top: 20%;
 }
+
+.modal-title {
+  font-weight: bold;
+  text-align: center;
+}
+
+/* .btn-success {
+  min-width: 50px;
+} */
+
+body.modal-open, .modal-open .navbar-fixed-top, .modal-open .navbar-fixed-bottom {
+    padding-right: 0 !important;
+}
+
+.modal {
+    overflow-y: auto;
+}
