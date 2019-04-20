@@ -314,6 +314,26 @@ a:hover, a:focus, a:active {
   text-align: center;
 }
 @media screen and (max-width: 640px){
+  .container .project-item{
+    display: block;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 900px){
+  .container .project-item{
+    width: 33.33333%;
+  }
+}
+
+
+.container{
+  padding: 1em 0;
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+@media screen and (max-width: 640px){
   .container{
     display: block;
     width: 100%;
@@ -326,16 +346,23 @@ a:hover, a:focus, a:active {
   }
 }
 
+.container {
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 10px;
+  align-items: center;
+}
 
 .content {
-  display: block;
   position: relative;
   width: 90%;
-  height: 90%;
+  max-width: 400px;
   margin: auto;
-  overflow: auto;
+  overflow: hidden;
+  text-align: center;
   align-items: center;
-  object-fit: cover;
+  box-shadow: 5px 5px 5px grey;
+  outline: 1px solid light-grey;
 }
 
 .content-overlay {
@@ -358,10 +385,9 @@ a:hover, a:focus, a:active {
 }
 
 .content-image{
+  height: 15rem;
+  object-fit: cover;
   width: 100%;
-  display: block;
-  overflow: auto;
-
 }
 
 .content-details {
@@ -370,7 +396,7 @@ a:hover, a:focus, a:active {
   padding-left: 1em;
   padding-right: 1em;
   width: 100%;
-  top: 50%;
+  top: 0%;
   left: 50%;
   opacity: 0;
   -webkit-transform: translate(-50%, -50%);
@@ -406,8 +432,4 @@ a:hover, a:focus, a:active {
 
 .fadeIn-top{
   top: 20%;
-}
-
-.fadeIn-left{
-  left: 20%;
 }
