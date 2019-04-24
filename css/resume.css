@@ -17,12 +17,13 @@ body {
   }
 }
 
+
 h1,
 h2,
 h3,
 h4,
 h5,
-h6{
+h6 {
   font-family: 'Saira Extra Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   font-weight: 700;
   text-transform: uppercase;
@@ -54,6 +55,11 @@ h6 {
 p.lead {
   font-size: 1.15rem;
   font-weight: 400;
+}
+
+p.project {
+  margin: 0;
+  padding: 0;
 }
 
 .subheading {
@@ -307,12 +313,6 @@ a:hover, a:focus, a:active {
 
 /*Project Images*/
 
-.container{
-  padding: 1em 0;
-  float: left;
-  width: 50%;
-  text-align: center;
-}
 @media screen and (max-width: 640px){
   .container .project-item{
     display: block;
@@ -327,12 +327,6 @@ a:hover, a:focus, a:active {
 }
 
 
-.container{
-  padding: 1em 0;
-  float: left;
-  width: 50%;
-  text-align: center;
-}
 @media screen and (max-width: 640px){
   .container{
     display: block;
@@ -347,10 +341,10 @@ a:hover, a:focus, a:active {
 }
 
 .container {
-  color: #1a1a1a;
+  padding: 1em 0;
+  float: left;
+  width: 50%;
   text-align: center;
-  margin-bottom: 10px;
-  align-items: center;
 }
 
 .content {
@@ -391,6 +385,7 @@ a:hover, a:focus, a:active {
 }
 
 .content-details {
+  flex-grow: 0;
   position: absolute;
   text-align: center;
   padding-left: 1em;
@@ -421,10 +416,6 @@ a:hover, a:focus, a:active {
   text-transform: capitalize;
 }
 
-.content-details p{
-  color: #fff;
-  font-size: 0.8em;
-}
 
 .fadeIn-bottom{
   top: 80%;
@@ -444,9 +435,75 @@ a:hover, a:focus, a:active {
 } */
 
 body.modal-open, .modal-open .navbar-fixed-top, .modal-open .navbar-fixed-bottom {
-    padding-right: 0 !important;
-}
+    align-items: center;
+    padding-right: 0px !important;
+  }
+
+  .modal.closed {
+
+    display: none;
+
+  }
 
 .modal {
-    overflow-y: auto;
+  overflow-y: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
 }
+
+/* Project Modals */
+
+/* .modal.modal-project {
+    width: 80%;
+    height: 80%;
+    align-items: center;
+} */
+
+.modal-project .modal-content {
+    /* height: 80%; */
+}
+
+.modal-dialog {
+  vertical-align: middle;
+  margin: auto;
+}
+
+@media (min-width: 768px) {
+  .modal-dialog {
+    width: 800;
+    margin: 0px auto;
+  }
+
+  .modal-content {
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+  }
+
+  .modal-item {
+    padding: 2rem;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    align-content: center;
+  }
+
+/* img.img-project {
+  display: flex;
+  justify-content: center; /* align horizontal */
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+} */
