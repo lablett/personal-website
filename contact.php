@@ -22,7 +22,7 @@ $subject = $_POST['subject'];
 $fields = array('name' => 'Name', 'surname' => 'Surname', 'phone' => 'Phone', 'subject' => 'Subject', 'email' => 'Email', 'message' => 'Message');
 
 // message that will be displayed when everything is OK :)
-$okMessage = 'Contact form successfully submitted. Thank you, I will get back to you soon!';
+$okMessage = 'Contact form successfully submitted. Thank you, I will get back to you soon!  Apologies that you are seeing this page, the contact form is a work in progress.';
 
 // If something goes wrong, we will display this message.
 $errorMessage = 'There was an error while submitting the form. Please try again later';
@@ -32,10 +32,6 @@ error_reporting(-1);
 
 try {
     if (!empty($_POST)) {
-      if(mail('test@domain.com', 'Test email', 'Test email with standard mail() function')) {
-        echo 'Mail sent';
-      }
-        else echo 'Mail sending failed';
 
         $emailTextHtml = "<h1>You have a new message from your contact form</h1><hr>";
         $emailTextHtml .= "<table>";
@@ -62,7 +58,7 @@ try {
         $mail->msgHTML($emailTextHtml); // this will also create a plain-text version of the HTML email, very handy
 
         if($mail->Send()) {
-          echo "success";
+          // echo "success";
         } else {
           throw new \Exception('I could not send the email.' . $mail->ErrorInfo);
           exit;
@@ -76,12 +72,12 @@ try {
         $responseArray = array('type' => 'danger', 'message' => $e->getMessage());
       }
 
-if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
-    $encoded = json_encode($responseArray);
-
-    header('Content-Type: application/json');
-
-    echo $encoded;
-} else {
-    echo $responseArray['message'];
-}
+// if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
+//     $encoded = json_encode($responseArray);
+//
+//     header('Content-Type: application/json');
+//
+//     echo $encoded;
+// } else {
+//     echo $responseArray['message'];
+// }
