@@ -180,7 +180,7 @@ p.project {
 section.resume-section {
   padding-top: 5rem !important;
   padding-bottom: 5rem !important;
-  max-width: 75rem;
+  max-width: 90rem;
   min-height: 100vh
 }
 
@@ -475,10 +475,10 @@ body.modal-open, .modal-open .navbar-fixed-top, .modal-open .navbar-fixed-bottom
   overflow: auto;
   align-content: center;
 }
-
+}
 /* img.img-project {
   display: flex;
-  justify-content: center; /* align horizontal */
+  justify-content: center; 
   align-items: center;
   display: -webkit-box;
   display: -webkit-flex;
